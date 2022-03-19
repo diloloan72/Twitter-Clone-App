@@ -66,7 +66,7 @@
         <!--Home-->
         <scene sceneID="SzJ-VM-RQM">
             <objects>
-                <tableViewController id="HJI-Dq-Hxe" sceneMemberID="viewController">
+                <tableViewController id="HJI-Dq-Hxe" customClass="HomeTableViewController" customModule="Twitter" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="FoM-UK-Hxl">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -86,7 +86,14 @@
                             <outlet property="delegate" destination="HJI-Dq-Hxe" id="C3K-YP-Cjp"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Home" id="5Ub-7v-1oJ"/>
+                    <navigationItem key="navigationItem" title="Home" id="5Ub-7v-1oJ">
+                        <barButtonItem key="leftBarButtonItem" title="Logout" id="JV3-nG-zQg">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <action selector="onLogout:" destination="HJI-Dq-Hxe" id="n5p-BF-VCR"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tKr-gz-eO5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
